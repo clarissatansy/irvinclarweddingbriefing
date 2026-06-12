@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarissa & Irvin · 25 July 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --sage: #7a9e7e;
+    --sage-light: #a8c5aa;
+    --sage-pale: #e8f0e8;
+    --cream: #faf7f2;
+    --cream-dark: #f0ebe0;
+    --mocha: #5c4a3a;
+    --mocha-light: #8a7060;
+    --text: #2e2420;
+    --text-light: #6a5a50;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); font-weight: 300; line-height: 1.7; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,126,0.2); padding: 0 2rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--mocha); letter-spacing: 0.5px; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sage); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--mocha); transition: 0.3s; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 100px 2rem 4rem; text-align: center; background: var(--cream); position: relative; overflow: hidden; }
+  .hero-flourish { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; opacity: 0.06; }
+  .hero-img { width: min(340px, 80vw); height: min(420px, 60vw); border-radius: 4px; background: var(--sage-pale); border: 1px solid rgba(122,158,126,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 3rem; position: relative; overflow: hidden; }
+  .hero-img::before { content: ''; position: absolute; inset: 12px; border: 1px solid rgba(122,158,126,0.2); border-radius: 2px; }
+  .hero-img-label { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage-light); }
+  .hero-eyebrow { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+  .hero-names { font-family: 'Playfair Display', serif; font-size: clamp(42px, 8vw, 88px); font-weight: 400; color: var(--mocha); line-height: 1.05; margin-bottom: 1.5rem; }
+  .hero-names em { font-style: italic; color: var(--sage); }
+  .hero-divider { display: flex; align-items: center; gap: 1rem; margin: 0 auto 1.5rem; width: min(280px, 80vw); }
+  .hero-divider-line { flex: 1; height: 0.5px; background: var(--sage-light); }
+  .hero-divider-icon { color: var(--sage); font-size: 14px; }
+  .hero-date { font-family: 'Playfair Display', serif; font-size: 16px; font-style: italic; color: var(--text-light); margin-bottom: 0.4rem; }
+  .hero-venue { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 860px; margin: 0 auto; }
+  .section-eyebrow { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 40px); font-weight: 400; color: var(--mocha); margin-bottom: 0.5rem; line-height: 1.2; }
+  .section-divider { width: 48px; height: 1.5px; background: var(--sage-light); margin: 1.5rem 0; }
+  .section-intro { font-size: 14px; color: var(--text-light); max-width: 560px; line-height: 1.8; }
+  .alt-bg { background: var(--cream-dark); }
+  .sage-bg { background: var(--sage-pale); }
+
+  /* OVERVIEW CARDS */
+  .overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 2rem; }
+  .overview-card { background: var(--white); border: 1px solid rgba(122,158,126,0.2); border-radius: 8px; padding: 1.5rem 1rem; text-align: center; }
+  .overview-card-time { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--sage); margin-bottom: 4px; }
+  .overview-card-label { font-family: 'Inter', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
+  .overview-card-desc { font-size: 11px; color: var(--text-light); line-height: 1.5; }
+  .info-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--white); border: 1px solid rgba(122,158,126,0.25); border-radius: 20px; padding: 6px 14px; font-size: 11px; color: var(--text-light); margin: 6px 4px 0; }
+  .info-pill span { color: var(--sage); font-size: 12px; }
+
+  /* TIMELINE */
+  .timeline { position: relative; margin-top: 2.5rem; }
+  .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(122,158,126,0.25); transform: translateX(-50%); }
+  .tl-item { display: grid; grid-template-columns: 1fr 40px 1fr; gap: 0 1rem; margin-bottom: 2rem; align-items: start; }
+  .tl-left { text-align: right; padding-top: 2px; }
+  .tl-right { padding-top: 2px; }
+  .tl-center { display: flex; flex-direction: column; align-items: center; }
+  .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); border: 2px solid var(--cream); box-shadow: 0 0 0 2px var(--sage-light); margin-top: 4px; flex-shrink: 0; }
+  .tl-stem { flex: 1; width: 1px; background: rgba(122,158,126,0.2); min-height: 30px; margin-top: 4px; }
+  .tl-time { font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: var(--sage); margin-bottom: 2px; }
+  .tl-event { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 3px; line-height: 1.4; }
+  .tl-detail { font-size: 11px; color: var(--text-light); line-height: 1.6; }
+  .tl-poc { display: inline-block; margin-top: 5px; font-size: 10px; background: var(--sage-pale); color: var(--sage); border-radius: 20px; padding: 2px 10px; letter-spacing: 0.5px; }
+  .tl-item.right .tl-left { opacity: 0; }
+  .tl-item.left .tl-right { opacity: 0; }
+
+  /* ROLES */
+  .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 2rem; }
+  .role-card { background: var(--white); border: 1px solid rgba(122,158,126,0.2); border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(90,70,50,0.04); }
+  .role-card-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--mocha); margin-bottom: 2px; }
+  .role-card-title { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+  .role-card-duties { font-size: 12px; color: var(--text-light); line-height: 1.8; padding-left: 14px; }
+  .role-card-duties li { margin-bottom: 2px; }
+
+  /* SEATING MAP */
+  .map-wrap { background: var(--white); border: 1px solid rgba(122,158,126,0.2); border-radius: 10px; padding: 2rem; margin-top: 2rem; box-shadow: 0 2px 12px rgba(90,70,50,0.04); }
+  .map-legend { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 1.2rem; font-size: 11px; color: var(--text-light); }
+  .leg-item { display: flex; align-items: center; gap: 6px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .map-note { margin-top: 1rem; font-size: 11px; color: var(--text-light); text-align: center; line-height: 1.7; }
+
+  /* VENDORS */
+  .vendor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 2rem; }
+  .vendor-card { background: var(--white); border: 1px solid rgba(122,158,126,0.2); border-radius: 10px; padding: 1.25rem 1.5rem; box-shadow: 0 2px 12px rgba(90,70,50,0.04); }
+  .vendor-type { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; }
+  .vendor-name { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--mocha); margin-bottom: 6px; }
+  .vendor-detail { font-size: 11px; color: var(--text-light); line-height: 1.8; }
+  .vendor-detail strong { color: var(--text); font-weight: 500; }
+
+  /* CONTINGENCY */
+  .contingency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 2rem; }
+  .contingency-card { background: var(--white); border: 1px solid rgba(122,158,126,0.2); border-left: 3px solid var(--sage-light); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem; }
+  .contingency-title { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--mocha); margin-bottom: 8px; }
+  .contingency-body { font-size: 11px; color: var(--text-light); line-height: 1.8; }
+
+  /* CAROUSEL */
+  .carousel { position: relative; margin-top: 2rem; user-select: none; }
+  .carousel-track-wrap { border-radius: 14px; overflow: hidden; background: var(--sage-pale); aspect-ratio: 4/3; }
+  .carousel-track { display: flex; height: 100%; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .carousel-slide { min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .carousel-placeholder { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sage); opacity: 0.7; }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(250,247,242,0.9); border: 1px solid rgba(122,158,126,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; transition: background 0.2s, box-shadow 0.2s; box-shadow: 0 2px 10px rgba(50,35,25,0.12); }
+  .carousel-btn:hover { background: var(--white); box-shadow: 0 4px 16px rgba(50,35,25,0.18); }
+  .carousel-btn svg { width: 16px; height: 16px; stroke: var(--mocha); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .carousel-prev { left: 12px; }
+  .carousel-next { right: 12px; }
+  .carousel-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+  .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(122,158,126,0.3); cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .carousel-dot.active { background: var(--sage); transform: scale(1.3); }
+  .carousel-counter { text-align: center; margin-top: 8px; font-size: 11px; letter-spacing: 1px; color: var(--text-light); }
+
+  /* FACES */
+  .faces-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .face-card { text-align: center; }
+  .face-photo { width: 100%; aspect-ratio: 1/1; border-radius: 12px; background: var(--sage-pale); border: 2px solid rgba(122,158,126,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; overflow: hidden; position: relative; }
+  .face-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .face-photo-placeholder { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--sage); opacity: 0.7; }
+  .face-name { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--mocha); margin-bottom: 2px; }
+  .face-role { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sage); }
+  .faces-group-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin: 2rem 0 0.5rem; border-bottom: 1px solid rgba(122,158,126,0.2); padding-bottom: 0.5rem; }
+
+  /* FOOTER */
+  footer { background: var(--mocha); color: rgba(255,255,255,0.6); text-align: center; padding: 3rem 2rem; }
+  footer .footer-names { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--white); margin-bottom: 0.5rem; }
+  footer .footer-date { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage-light); margin-bottom: 1.5rem; }
+  footer .footer-note { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+  /* MOBILE NAV */
+  .mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid rgba(122,158,126,0.2); padding: 1.5rem 2rem; z-index: 99; flex-direction: column; gap: 1.2rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); text-decoration: none; }
+
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+
+    /* Tighter section spacing on mobile */
+    section { padding: 3rem 1.25rem; }
+
+    /* Timeline */
+    .timeline::before { left: 20px; }
+    .tl-item { grid-template-columns: 20px 1fr; grid-template-rows: auto auto; }
+    .tl-center { grid-column: 1; grid-row: 1; }
+    .tl-right, .tl-left { grid-column: 2; grid-row: 1; text-align: left; opacity: 1 !important; }
+    .tl-item.right .tl-left { display: none; }
+
+    /* Hero */
+    .hero-img { width: min(300px, 88vw); height: min(360px, 55vw); }
+
+    /* Chat window — full width on mobile, taller on short screens */
+    #chat-window {
+      right: 0; left: 0;
+      width: 100% !important;
+      bottom: 80px;
+      border-radius: 18px 18px 0 0;
+      height: min(520px, calc(100vh - 100px));
+    }
+    #chat-fab { bottom: 20px; right: 16px; }
+
+    /* Faces grid — 2 columns always */
+    .faces-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+    /* Vendor & contingency cards — single column */
+    .vendor-grid, .contingency-grid { grid-template-columns: 1fr; }
+
+    /* Section inner on mobile */
+    .section-inner { padding: 0; }
+
+    /* Overview info pills — wrap nicely */
+    .info-pills { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Clarissa & Irvin</div>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#faces">Faces</a></li>
+    <li><a href="#registration">Registration</a></li>
+    <li><a href="#seating">Seating</a></li>
+    <li><a href="#vendors">Vendors</a></li>
+    <li><a href="#contingency">Contingency</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#overview" onclick="toggleMenu()">Overview</a>
+  <a href="#schedule" onclick="toggleMenu()">Schedule</a>
+  <a href="#team" onclick="toggleMenu()">Team</a>
+  <a href="#faces" onclick="toggleMenu()">Faces</a>
+  <a href="#registration" onclick="toggleMenu()">Registration</a>
+  <a href="#seating" onclick="toggleMenu()">Seating</a>
+  <a href="#vendors" onclick="toggleMenu()">Vendors</a>
+  <a href="#contingency" onclick="toggleMenu()">Contingency</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-flourish" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="400" cy="400" r="300" fill="none" stroke="#7a9e7e" stroke-width="1"/>
+    <circle cx="400" cy="400" r="350" fill="none" stroke="#7a9e7e" stroke-width="0.5"/>
+    <path d="M100,400 Q400,100 700,400 Q400,700 100,400" fill="none" stroke="#7a9e7e" stroke-width="0.8"/>
+    <path d="M400,100 Q700,400 400,700 Q100,400 400,100" fill="none" stroke="#7a9e7e" stroke-width="0.8"/>
+  </svg>
+  <div class="hero-img">
+    <img src="images/irvin-clarissa-pws-200.jpg" alt="Clarissa & Irvin" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;">
+  </div>
+  <div class="hero-eyebrow">Wedding Day Briefing</div>
+  <h1 class="hero-names">Clarissa<br><em>&</em><br>Irvin</h1>
+  <div class="hero-divider">
+    <div class="hero-divider-line"></div>
+    <div class="hero-divider-icon">✦</div>
+    <div class="hero-divider-line"></div>
+  </div>
+  <div class="hero-date">Saturday, 25 July 2026</div>
+  <div class="hero-venue">5 on 25 · Andaz Singapore</div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-eyebrow">01 · Overview</div>
+    <h2 class="section-title">The Big Picture</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Here's how the day unfolds. For anything unclear, Melody is your first point of contact.</p>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-card-label">Getting Ready</div>
+        <div class="overview-card-time">7:00</div>
+        <div class="overview-card-desc">MUA arrives at hotel room</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">First Look</div>
+        <div class="overview-card-time">10:35</div>
+        <div class="overview-card-desc">Inside 5 on 25</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">Tea Ceremony</div>
+        <div class="overview-card-time">10:45</div>
+        <div class="overview-card-desc">Private Room · ~45 mins</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">Solemnisation</div>
+        <div class="overview-card-time">11:45</div>
+        <div class="overview-card-desc">March-in & Ceremony</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">Lunch</div>
+        <div class="overview-card-time">12:20</div>
+        <div class="overview-card-desc">7 courses & photo rounds</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-card-label">Wrap Up</div>
+        <div class="overview-card-time">2:00</div>
+        <div class="overview-card-desc">Tear-down & pack-up</div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;">
+      <div class="info-pill"><span>✦</span> Venue access from 10:00 AM</div>
+      <div class="info-pill"><span>✦</span> ~67 guests across 10 tables</div>
+      <div class="info-pill"><span>✦</span> Solemniser: Mr Chiang Heng Liang</div>
+      <div class="info-pill"><span>✦</span> Venue contact: Ruth · 9658 7143</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="section-inner">
+    <div class="section-eyebrow">02 · Schedule</div>
+    <h2 class="section-title">Run of Day</h2>
+    <div class="section-divider"></div>
+
+    <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--sage);margin-bottom:1.5rem;">Morning</div>
+    <div class="timeline">
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">7:00 AM</div>
+          <div class="tl-event">MUA arrives for Clarissa</div>
+          <div class="tl-detail">Imelda (Autelier) · Hotel Room</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">8:00 AM</div>
+          <div class="tl-event">Second MUA session — Mums</div>
+          <div class="tl-detail">Hotel Room · Fathers wait on Level 25</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">10:00 AM</div>
+          <div class="tl-event">MUA works on Irvin · Venue access opens</div>
+          <div class="tl-detail">Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant · Calvin & Aileen/Chon Hei begin hall set-up · Michelle & Charis (Sister) set up registration — hold guests from entering until First Look is done</div>
+          <span class="tl-poc">All team</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">10:25 AM</div>
+          <div class="tl-event">Irvin positioned in restaurant</div>
+          <div class="tl-detail">To be in place before Clarissa arrives</div>
+          <span class="tl-poc">Melody to cue</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">10:30 AM</div>
+          <div class="tl-event">Veiling · Clarissa heads to restaurant · Hua Florist arrives</div>
+          <div class="tl-detail">Aileen & Chon Hei to receive florist · Centrepieces moved to private room for tea ceremony</div>
+          <span class="tl-poc">Melody · Aileen & Chon Hei</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">10:35 AM</div>
+          <div class="tl-event">First Look — inside 5 on 25</div>
+          <div class="tl-detail">Videographer & Photographer in position</div>
+          <span class="tl-poc">Melody time-checks</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">10:45 AM</div>
+          <div class="tl-event">Tea Ceremony begins — Private Room</div>
+          <div class="tl-detail">Hotel staff manage tea · Michelle oversees · Aileen/Chon Hei assist · Keong Saik Bakery pastries (4 boxes × 20pc) to be received and set out</div>
+          <span class="tl-poc">Michelle</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:20 AM</div>
+          <div class="tl-event">Guests begin arriving</div>
+          <div class="tl-detail">Michelle & Charis (Sister) manage registration · Direct guests to seats</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:30 AM</div>
+          <div class="tl-event">Tea Ceremony ends</div>
+          <div class="tl-detail">Aileen & Chon Hei bring centrepieces back to main table · Melody ensures table is set for signing</div>
+          <span class="tl-poc">Aileen & Chon Hei · Melody</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:35 AM</div>
+          <div class="tl-event">All guests to be seated</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:40 AM</div>
+          <div class="tl-event">Pre-ceremony positioning</div>
+          <div class="tl-detail">Michelle — Irvin's father & Mums seated at solemnisation table · Melody — gets Peow & Clarissa ready in private room · Amala — Solemniser in position · Irvin — at the altar · Charis (Sister) — hold any stragglers at door</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:45 AM</div>
+          <div class="tl-event">Amala announces ceremony · Guests rise · March-In</div>
+          <div class="tl-detail">Peow walks Clarissa down the aisle</div>
+          <span class="tl-poc">Amala</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">11:50 AM</div>
+          <div class="tl-event">Solemnisation begins</div>
+          <span class="tl-poc">Mr Chiang Heng Liang · Amala POC</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--sage);margin:2.5rem 0 1.5rem;">Afternoon</div>
+    <div class="timeline">
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">12:20 PM</div>
+          <div class="tl-event">Solemnisation ends · 1st Course served</div>
+          <div class="tl-detail">Main table reorganised · Amala cues Solemniser's departure</div>
+          <span class="tl-poc">Amala</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">12:30 PM</div>
+          <div class="tl-event">2nd Course served · Thank You Speech</div>
+          <div class="tl-detail">Clarissa & Irvin address their guests</div>
+          <span class="tl-poc">Amala to introduce</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">12:50 PM</div>
+          <div class="tl-event">Part 2 of Speech (TBC) · Photo-taking begins — Tables 1 & 2</div>
+          <div class="tl-detail">Calvin, Michelle & Charis (Sister) rotate guiding groups to private room</div>
+          <span class="tl-poc">Amala announces each round</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">1:00 PM</div>
+          <div class="tl-event">4th Course served · Photo-taking — Tables 3 & 4</div>
+          <div class="tl-detail">Team rotates — everyone gets to eat too</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">1:15 PM</div>
+          <div class="tl-event">5th Course served · Photo-taking — Tables 5 & 6</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">1:30 PM</div>
+          <div class="tl-event">5th & 6th Courses served · Photo-taking — Tables 7, 8 & 9</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">1:45 PM</div>
+          <div class="tl-event">Dessert served · Happy Birthday Guang Thong! · Closing Remarks</div>
+          <span class="tl-poc">Amala</span>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">1:55 PM</div>
+          <div class="tl-event">Parents thank guests at the door</div>
+        </div>
+      </div>
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">2:00 PM</div>
+          <div class="tl-event">Tear-Down</div>
+          <div class="tl-detail">Calvin & Melody — table collaterals · Charis (Sister) & Michelle — registration table · Aileen & Chon Hei — assist Hua Florist with vase collection (TBC)</div>
+          <span class="tl-poc">All team</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="sage-bg">
+  <div class="section-inner">
+    <div class="section-eyebrow">03 · Team</div>
+    <h2 class="section-title">Roles & Responsibilities</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Each person owns their domain end-to-end. When in doubt, check in with Melody.</p>
+    <div class="roles-grid">
+      <div class="role-card">
+        <div class="role-card-name">Melody</div>
+        <div class="role-card-title">Wedding Coordinator</div>
+        <ul class="role-card-duties">
+          <li>Oversees full run of day</li>
+          <li>All time-checks & milestone cues</li>
+          <li>Cues Irvin to restaurant (10:25 AM)</li>
+          <li>Gets Peow & Clarissa ready for March-in</li>
+          <li>Ensures table is set for signing</li>
+          <li>Troubleshoots & escalates issues</li>
+          <li>Collects collaterals at tear-down</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-name">Calvin</div>
+        <div class="role-card-title">Decor, AV & Set-up Lead</div>
+        <ul class="role-card-duties">
+          <li>Main hall set-up with Aileen & Chon Hei</li>
+          <li>Learns AV system & oversees hotel AV staff</li>
+          <li>Ensures dining room is guest-ready by 11:20 AM</li>
+          <li>Rotates guiding photo groups during lunch</li>
+          <li>Collects collaterals at tear-down</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-name">Michelle</div>
+        <div class="role-card-title">Registration & Tea Ceremony Lead</div>
+        <ul class="role-card-duties">
+          <li>Co-manages registration with Charis (Sister)</li>
+          <li>Identifies & directs relatives to private room</li>
+          <li>Holds guests until First Look is done</li>
+          <li>Supervises private room set-up</li>
+          <li>Oversees tea ceremony flow</li>
+          <li>Positions Irvin's father & Mums at solemnisation table</li>
+          <li>Rotates guiding photo groups</li>
+          <li><strong>Parking coupons POC</strong> — if any vendor needs a parking coupon, their respective POC should approach Michelle</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-name">Charis (Sister)</div>
+        <div class="role-card-title">Registration & Angbao Lead</div>
+        <ul class="role-card-duties">
+          <li>Co-manages registration with Michelle</li>
+          <li>Sole custodian of angbao box</li>
+          <li>Holds stragglers during March-in</li>
+          <li>Rotates guiding photo groups</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-name">Amala</div>
+        <div class="role-card-title">Emcee & Solemniser POC</div>
+        <ul class="role-card-duties">
+          <li>Primary contact for Solemniser</li>
+          <li>Announces ceremony & cues guests to rise</li>
+          <li>Introduces Thank You Speech</li>
+          <li>Announces each photo round</li>
+          <li>Birthday shoutout for Guang Thong</li>
+          <li>Closing remarks & Solemniser departure cue</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-card-name">Aileen & Chon Hei</div>
+        <div class="role-card-title">Runners — Florals & Pastries POC</div>
+        <ul class="role-card-duties">
+          <li>Assist Calvin with hall set-up</li>
+          <li>Receive Keong Saik Bakery delivery (4 boxes × 20pc)</li>
+          <li>Receive & liaise with Hua Florist</li>
+          <li>Move centrepieces: hall → private room → main table</li>
+          <li>Assist Hua Florist vase collection at tear-down (TBC)</li>
+          <li>Assist Melody with positional cues if needed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACES -->
+<section id="faces" class="sage-bg">
+  <div class="section-inner">
+    <div class="section-label">The Wedding Party</div>
+    <h2 class="section-title">Important Faces<br>to Remember</h2>
+    <p class="section-intro">A quick reference so everyone on the team knows who's who on the day.</p>
+
+    <div class="faces-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 400px;">
+      <div class="face-card">
+        <div class="face-photo">
+          <img src="images/familybride.jpeg" alt="Bride's Family">
+        </div>
+        <div class="face-name">Bride's Family</div>
+        <div class="face-role">Family of the Bride</div>
+        <div style="font-size:11px;color:var(--text-light);line-height:1.8;margin-top:6px;">Mother: Corina Lee<br>Father: Peow</div>
+      </div>
+      <div class="face-card">
+        <div class="face-photo">
+          <img src="images/familygroom.jpeg" alt="Groom's Family">
+        </div>
+        <div class="face-name">Groom's Family</div>
+        <div class="face-role">Family of the Groom</div>
+        <div style="font-size:11px;color:var(--text-light);line-height:1.8;margin-top:6px;">Mother: Carol Chin<br>Father: Joe Lim</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION DESK -->
+<section id="registration">
+  <div class="section-inner">
+    <div class="section-label">Inspiration</div>
+    <h2 class="section-title">Registration Desk</h2>
+    <p class="section-intro">Visual references for how the registration area should look and feel on the day. These are just a guide — Charis should use her discretion on the actual set-up.</p>
+    <div class="carousel" id="regCarousel">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="regTrack">
+          <div class="carousel-slide"><img src="images/reg1.jpeg" alt="Registration desk inspiration 1"></div>
+          <div class="carousel-slide"><img src="images/reg2.jpeg" alt="Registration desk inspiration 2"></div>
+          <div class="carousel-slide"><img src="images/reg3.jpeg" alt="Registration desk inspiration 3"></div>
+          <div class="carousel-slide"><img src="images/reg4.jpeg" alt="Registration desk inspiration 4"></div>
+          <div class="carousel-slide"><img src="images/reg5.jpeg" alt="Registration desk inspiration 5"></div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" onclick="carouselMove('regCarousel',-1)" aria-label="Previous">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn carousel-next" onclick="carouselMove('regCarousel',1)" aria-label="Next">
+        <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+      <div class="carousel-dots" id="regDots"></div>
+      <div class="carousel-counter" id="regCounter"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEATING -->
+<section id="seating" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-eyebrow">04 · Venue</div>
+    <h2 class="section-title">Seating Plan</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">5 on 25 at Andaz Singapore · 10 tables · ~67 guests</p>
+    <div class="map-wrap">
+      <svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;font-family:'Inter',sans-serif;">
+        <rect x="10" y="10" width="58" height="58" rx="29" fill="#8a7060" opacity="0.7"/>
+        <text x="39" y="43" text-anchor="middle" font-size="8" fill="#fff">PILLAR</text>
+        <rect x="492" y="10" width="58" height="58" rx="29" fill="#8a7060" opacity="0.7"/>
+        <text x="521" y="43" text-anchor="middle" font-size="8" fill="#fff">PILLAR</text>
+        <rect x="10" y="258" width="58" height="58" rx="29" fill="#8a7060" opacity="0.7"/>
+        <text x="39" y="291" text-anchor="middle" font-size="8" fill="#fff">PILLAR</text>
+        <rect x="492" y="258" width="58" height="58" rx="29" fill="#8a7060" opacity="0.7"/>
+        <text x="521" y="291" text-anchor="middle" font-size="8" fill="#fff">PILLAR</text>
+        <!-- Blue tables -->
+        <circle cx="185" cy="52" r="40" fill="#a8c5aa" stroke="#7a9e7e" stroke-width="1.5"/>
+        <text x="185" y="48" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 4</text>
+        <text x="185" y="61" text-anchor="middle" font-size="9" fill="#2e4a30">9 pax</text>
+        <circle cx="280" cy="52" r="40" fill="#a8c5aa" stroke="#7a9e7e" stroke-width="1.5"/>
+        <text x="280" y="48" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 5</text>
+        <text x="280" y="61" text-anchor="middle" font-size="9" fill="#2e4a30">9 pax</text>
+        <circle cx="375" cy="52" r="40" fill="#a8c5aa" stroke="#7a9e7e" stroke-width="1.5"/>
+        <text x="375" y="48" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 6</text>
+        <text x="375" y="61" text-anchor="middle" font-size="9" fill="#2e4a30">9 pax</text>
+        <!-- Green tables -->
+        <circle cx="80" cy="138" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="80" y="134" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 2</text>
+        <text x="80" y="147" text-anchor="middle" font-size="9" fill="#5a7a5c">5 pax</text>
+        <circle cx="480" cy="138" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="480" y="134" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 7</text>
+        <text x="480" y="147" text-anchor="middle" font-size="9" fill="#5a7a5c">4 pax</text>
+        <circle cx="80" cy="222" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="80" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 1</text>
+        <text x="80" y="231" text-anchor="middle" font-size="9" fill="#5a7a5c">5 pax</text>
+        <circle cx="196" cy="214" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="196" y="210" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 3</text>
+        <text x="196" y="223" text-anchor="middle" font-size="9" fill="#5a7a5c">7 pax</text>
+        <circle cx="370" cy="214" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="370" y="207" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 9</text>
+        <text x="370" y="220" text-anchor="middle" font-size="9" fill="#5a7a5c">6 pax</text>
+        <text x="370" y="232" text-anchor="middle" font-size="8" fill="#5a7a5c">(+1 baby)</text>
+        <circle cx="480" cy="222" r="33" fill="#e8f0e8" stroke="#a8c5aa" stroke-width="1.5"/>
+        <text x="480" y="215" text-anchor="middle" font-size="10" font-weight="600" fill="#2e4a30">Table 8</text>
+        <text x="480" y="228" text-anchor="middle" font-size="9" fill="#5a7a5c">4 pax</text>
+        <text x="480" y="240" text-anchor="middle" font-size="8" fill="#5a7a5c">(+1 baby)</text>
+        <!-- Couple table -->
+        <rect x="244" y="172" width="112" height="56" rx="6" fill="#7a9e7e" stroke="#5a7a5c" stroke-width="1.5"/>
+        <text x="300" y="195" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Table 10</text>
+        <text x="300" y="208" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)">9 pax</text>
+        <text x="300" y="220" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.7)">Couple's Table</text>
+        <!-- Kitchen -->
+        <rect x="132" y="280" width="296" height="44" rx="4" fill="#c8b8a8" opacity="0.8"/>
+        <text x="280" y="307" text-anchor="middle" font-size="11" fill="#5c4a3a" font-weight="500">Kitchen</text>
+      </svg>
+      <div class="map-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:#a8c5aa;"></div>Tables 4–6 (9 pax each)</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#e8f0e8;border:1.5px solid #a8c5aa;"></div>Tables 1–3, 7–9</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#7a9e7e;"></div>Table 10 — Couple's Table</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#8a7060;opacity:0.7;"></div>Pillars / Kitchen</div>
+      </div>
+      <p class="map-note"><strong>Photo-taking order:</strong> Tables 1–2 → 3–4 → 5–6 → 7, 8, 9<br>Groups guided to private room · Private room walls to be broken down before guests arrive</p>
+    </div>
+  </div>
+</section>
+
+<!-- VENDORS -->
+<section id="vendors">
+  <div class="section-inner">
+    <div class="section-eyebrow">05 · Vendors</div>
+    <h2 class="section-title">Vendor Contacts</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">All vendor arrivals to be confirmed one week prior. When in doubt, call your POC first.</p>
+    <div class="vendor-grid">
+      <div class="vendor-card">
+        <div class="vendor-type">Venue</div>
+        <div class="vendor-name">5 on 25 · Andaz Singapore</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> Ruth · 9658 7143<br>
+          <strong>POC:</strong> Michelle & Melody<br>
+          <strong>Note:</strong> Michelle specifically handles tea ceremony liaison
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Hair & MUA</div>
+        <div class="vendor-name">Autelier</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> Imelda · 8893 3389<br>
+          <strong>POC:</strong> Clarissa & Irvin<br>
+          <strong>Arrival:</strong> 7:00 AM (Bride) · 8:00 AM (Mums) · 10:00 AM (Groom)
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Videographer</div>
+        <div class="vendor-name">Unveil Productions</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> Daniel · 8202 7282<br>
+          <strong>POC:</strong> Melody<br>
+          <strong>Note:</strong> Hotel room first for veiling → restaurant for First Look
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Photographer</div>
+        <div class="vendor-name">Perfect Statement</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> Charis · 9023 1229<br>
+          <strong>POC:</strong> Melody<br>
+          <strong>Note:</strong> Hotel room first for veiling → restaurant for First Look
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Florals</div>
+        <div class="vendor-name">Hua Florist</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> 9438 5907<br>
+          <strong>POC:</strong> Aileen & Chon Hei<br>
+          <strong>Note:</strong> Arrives ~10:30 AM · Will return to collect vases after event (TBC)
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Solemniser</div>
+        <div class="vendor-name">Mr Chiang Heng Liang</div>
+        <div class="vendor-detail">
+          <strong>Contact:</strong> 9684 6260<br>
+          <strong>POC:</strong> Amala<br>
+          <strong>Arrival:</strong> 11:40 AM · Amala to ensure he is in position
+        </div>
+      </div>
+      <div class="vendor-card">
+        <div class="vendor-type">Pastries · Tea Ceremony</div>
+        <div class="vendor-name">Keong Saik Bakery</div>
+        <div class="vendor-detail">
+          <strong>POC:</strong> Aileen & Chon Hei<br>
+          <strong>Note:</strong> 4 boxes × 20pc mini pastries · Receive delivery & bring to private room
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTINGENCY -->
+<section id="contingency" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-eyebrow">06 · Contingency</div>
+    <h2 class="section-title">Emergency & Contingency</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Hopefully none of this is needed. But just in case — here's the plan.</p>
+    <div class="contingency-grid">
+      <div class="contingency-card">
+        <div class="contingency-title">Vendor No-Show</div>
+        <div class="contingency-body">
+          <strong>Photographer/Videographer:</strong> Contact Melody immediately. Call Daniel (8202 7282) or Charis – Perfect Statement (9023 1229) directly.<br><br>
+          <strong>Florist:</strong> Aileen & Chon Hei to call Hua Florist (9438 5907) directly.<br><br>
+          <strong>Solemniser:</strong> Amala to call Mr Chiang Heng Liang (9684 6260). Delay ceremony up to 15 mins — inform Melody.
+        </div>
+      </div>
+      <div class="contingency-card">
+        <div class="contingency-title">Schedule Delays</div>
+        <div class="contingency-body">
+          <strong>Tea Ceremony runs long:</strong> Melody flags at 11:25 AM. Hard stop at 11:30 AM.<br><br>
+          <strong>Ceremony runs long:</strong> Amala liaises with Solemniser. Inform kitchen to hold first course.<br><br>
+          <strong>First Look delayed:</strong> Melody holds guests at registration. Michelle & Charis (Sister) prevent anyone entering restaurant.<br><br>
+          <strong>General buffer:</strong> ~10 min grace at each milestone.
+        </div>
+      </div>
+      <div class="contingency-card">
+        <div class="contingency-title">Guest Management</div>
+        <div class="contingency-body">
+          <strong>Very early guests:</strong> Hold at registration — do not allow entry to private room or restaurant until First Look is complete.<br><br>
+          <strong>Late guests (during March-in):</strong> Hold at door until March-in is complete.<br><br>
+          <strong>Angbao box:</strong> Always with Charis (Sister). If unsure, check with her.
+        </div>
+      </div>
+      <div class="contingency-card">
+        <div class="contingency-title">AV & Set-up Issues</div>
+        <div class="contingency-body">
+          <strong>AV problems:</strong> Calvin to escalate to hotel AV staff & Ruth (9658 7143) immediately.<br><br>
+          <strong>Floral issues:</strong> Aileen & Chon Hei to liaise with Hua Florist directly.<br><br>
+          <strong>Room not ready:</strong> Melody to escalate to Ruth at Andaz.
+        </div>
+      </div>
+      <div class="contingency-card">
+        <div class="contingency-title">Photographer & Videographer Meals</div>
+        <div class="contingency-body">
+          Daniel and Charis (Perfect Statement) may require a crew meal. Confirm before the wedding day and pre-arrange with Ruth if needed.<br><br>
+          <strong>Action:</strong> Melody to confirm and coordinate with Ruth in advance.
+        </div>
+      </div>
+      <div class="contingency-card">
+        <div class="contingency-title">Emergency Numbers</div>
+        <div class="contingency-body">
+          Police: <strong>999</strong><br>
+          Ambulance: <strong>995</strong><br>
+          Venue (Ruth): <strong>9658 7143</strong><br>
+          Raffles Hospital: <strong>6311 1111</strong> · 585 North Bridge Road
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-names">Clarissa & Irvin</div>
+  <div class="footer-date">25 · 07 · 2026 · Andaz Singapore</div>
+  <div class="footer-note">With love — thank you for being part of our day.</div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('mobileMenu');
+    var toggle = document.querySelector('.nav-toggle');
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+
+<!-- ═══════════════════════════ CHATBOT STYLES ═══════════════════════════ -->
+<style>
+  /* Fab button */
+  #chat-fab {
+    position: fixed; bottom: 28px; right: 28px; z-index: 9000;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--sage); color: #fff; border: none; cursor: pointer;
+    box-shadow: 0 4px 18px rgba(90,70,50,0.22);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; transition: background 0.2s, transform 0.15s;
+    overflow: hidden; padding: 0;
+  }
+  #chat-fab img { width: 72%; height: 72%; object-fit: contain; border-radius: 0; display: block; }
+  #chat-fab.open img { display: none; }
+  #chat-fab.open::after { content: '✕'; font-size: 20px; color: #fff; }
+  #chat-fab:hover { background: var(--mocha); transform: scale(1.07); }
+
+  /* Window */
+  #chat-window {
+    position: fixed; bottom: 96px; right: 28px; z-index: 8999;
+    width: min(380px, calc(100vw - 40px));
+    height: min(540px, calc(100vh - 130px));
+    background: var(--cream); border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(50,35,25,0.18);
+    border: 1px solid rgba(122,158,126,0.25);
+    display: none; flex-direction: column; overflow: hidden;
+  }
+  #chat-window.open { display: flex; }
+
+  /* Header */
+  #chat-header {
+    background: var(--mocha); color: #fff;
+    padding: 14px 18px; display: flex; align-items: center; gap: 10px;
+    flex-shrink: 0;
+  }
+  #chat-header .ch-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--sage); display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+  #chat-header .ch-info { flex: 1; }
+  #chat-header .ch-name { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 400; }
+  #chat-header .ch-sub { font-size: 10px; opacity: 0.6; letter-spacing: 1px; text-transform: uppercase; margin-top: 1px; }
+  #chat-close {
+    background: none; border: none; color: rgba(255,255,255,0.7);
+    font-size: 18px; cursor: pointer; padding: 0 2px; line-height: 1;
+    transition: color 0.15s;
+  }
+  #chat-close:hover { color: #fff; }
+
+  /* API key setup banner */
+  #api-key-banner {
+    background: #fdf6ec; border-bottom: 1px solid rgba(122,158,126,0.2);
+    padding: 12px 16px; font-size: 11px; color: var(--text-light); flex-shrink: 0;
+  }
+  #api-key-banner.hidden { display: none; }
+  #api-key-banner p { margin-bottom: 8px; line-height: 1.5; }
+  #api-key-banner .key-row { display: flex; gap: 6px; }
+  #api-key-input {
+    flex: 1; border: 1px solid rgba(122,158,126,0.35); border-radius: 6px;
+    padding: 5px 8px; font-size: 11px; font-family: monospace;
+    background: #fff; color: var(--text); outline: none;
+  }
+  #api-key-save {
+    background: var(--sage); color: #fff; border: none; border-radius: 6px;
+    padding: 5px 12px; font-size: 11px; cursor: pointer; white-space: nowrap;
+    transition: background 0.15s;
+  }
+  #api-key-save:hover { background: var(--mocha); }
+
+  /* Messages */
+  #chat-messages {
+    flex: 1; overflow-y: auto; padding: 16px;
+    display: flex; flex-direction: column; gap: 10px;
+    scroll-behavior: smooth;
+  }
+  .msg { max-width: 85%; display: flex; flex-direction: column; gap: 2px; }
+  .msg.bot { align-self: flex-start; }
+  .msg.user { align-self: flex-end; }
+  .msg-bubble {
+    padding: 9px 13px; border-radius: 14px; font-size: 12.5px; line-height: 1.6;
+    word-break: break-word;
+  }
+  .msg.bot .msg-bubble {
+    background: #fff; color: var(--text);
+    border: 1px solid rgba(122,158,126,0.2);
+    border-bottom-left-radius: 4px;
+  }
+  .msg.user .msg-bubble {
+    background: var(--sage); color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .msg-bubble p { margin: 0 0 6px; }
+  .msg-bubble p:last-child { margin-bottom: 0; }
+  .msg-bubble strong { font-weight: 600; }
+  .msg-time { font-size: 10px; color: var(--text-light); opacity: 0.6; padding: 0 4px; }
+  .msg.user .msg-time { text-align: right; }
+
+  /* Typing indicator */
+  .typing-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--sage-light); margin: 0 2px; animation: bounce 1.2s infinite; }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+
+  /* Input */
+  #chat-input-row {
+    display: flex; gap: 8px; padding: 12px 14px 14px;
+    border-top: 1px solid rgba(122,158,126,0.15); flex-shrink: 0;
+    background: var(--cream);
+  }
+  #chat-input {
+    flex: 1; border: 1px solid rgba(122,158,126,0.3); border-radius: 20px;
+    padding: 8px 14px; font-size: 12.5px; font-family: 'Inter', sans-serif;
+    color: var(--text); background: #fff; outline: none; resize: none;
+    max-height: 80px; line-height: 1.5;
+    transition: border-color 0.15s;
+  }
+  #chat-input:focus { border-color: var(--sage); }
+  #chat-send {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; align-self: flex-end;
+    background: var(--sage); color: #fff; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+    transition: background 0.15s; margin-bottom: 1px;
+  }
+  #chat-send:hover { background: var(--mocha); }
+  #chat-send:disabled { background: var(--sage-light); cursor: default; }
+
+  /* Suggestions */
+  #chat-suggestions {
+    padding: 0 14px 10px; display: flex; flex-wrap: wrap; gap: 6px; flex-shrink: 0;
+  }
+  .suggestion-chip {
+    background: var(--sage-pale); color: var(--mocha); border: 1px solid rgba(122,158,126,0.25);
+    border-radius: 12px; padding: 4px 10px; font-size: 10.5px; cursor: pointer;
+    transition: background 0.15s; white-space: nowrap;
+  }
+  .suggestion-chip:hover { background: rgba(122,158,126,0.2); }
+</style>
+
+<!-- ═══════════════════════════ CHATBOT HTML ═══════════════════════════ -->
+<button id="chat-fab" onclick="toggleChat()" title="Ask Casey"><img src="images/askcasey.PNG" alt="Ask Casey"></button>
+
+<div id="chat-window">
+  <div id="chat-header">
+    <div class="ch-avatar" style="overflow:hidden;padding:0;"><img src="images/askcasey.PNG" alt="Casey" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="ch-info">
+      <div class="ch-name">Ask Casey</div>
+      <div class="ch-sub">Clarissa & Irvin · 25 Jul 2026</div>
+    </div>
+    <button id="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+
+  <div id="api-key-banner">
+    <p>Enter your Anthropic API key to activate the assistant. Key is saved locally in your browser only.</p>
+    <div class="key-row">
+      <input id="api-key-input" type="password" placeholder="sk-ant-…" autocomplete="off">
+      <button id="api-key-save" onclick="saveApiKey()">Save</button>
+    </div>
+  </div>
+
+  <div id="chat-messages"></div>
+
+  <div id="chat-suggestions">
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">I'm Calvin, what do I do now?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">What time does ceremony start?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">I'm [name], what should I be doing at [time]?</span>
+  </div>
+
+  <div id="chat-input-row">
+    <textarea id="chat-input" rows="1" placeholder="Ask anything about today…" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+    <button id="chat-send" onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ CAROUSEL SCRIPT ═══════════════════════════ -->
+<script>
+const carousels = {};
+function carouselInit(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const slides = el.querySelectorAll('.carousel-slide');
+  const total = slides.length;
+  carousels[id] = { index: 0, total };
+  const dotsEl = document.getElementById(id.replace('Carousel','Dots') + (id.includes('Dots') ? '' : ''));
+  const dotsContainer = el.querySelector('.carousel-dots');
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('span');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => carouselGoTo(id, i);
+    dotsContainer.appendChild(d);
+  }
+  carouselRender(id);
+}
+function carouselRender(id) {
+  const el = document.getElementById(id);
+  const c = carousels[id];
+  el.querySelector('.carousel-track').style.transform = `translateX(-${c.index * 100}%)`;
+  el.querySelectorAll('.carousel-dot').forEach((d,i) => d.classList.toggle('active', i === c.index));
+  const counter = el.querySelector('.carousel-counter');
+  if (counter) counter.textContent = `${c.index + 1} / ${c.total}`;
+}
+function carouselMove(id, dir) {
+  const c = carousels[id];
+  c.index = (c.index + dir + c.total) % c.total;
+  carouselRender(id);
+}
+function carouselGoTo(id, i) {
+  carousels[id].index = i;
+  carouselRender(id);
+}
+document.addEventListener('DOMContentLoaded', () => carouselInit('regCarousel'));
+</script>
+
+<!-- ═══════════════════════════ CHATBOT SCRIPT ═══════════════════════════ -->
+<script>
+// ─── State ───────────────────────────────────────────────────────────────────
+let chatOpen = false;
+let chatHistory = [];
+let isStreaming = false;
+
+const SYSTEM_PROMPT = `You are the wedding day assistant for Clarissa & Irvin's wedding on Saturday, 25 July 2026 at 5 on 25, Andaz Singapore. You help the wedding team helpers and vendors with questions about the schedule, their roles, and what to do next.
+
+You are Casey, Clarissa & Irvin's dog. You can't be at the wedding today (dogs not allowed lah!) but you're helping from home. Respond in casual Singlish with dog-themed energy — warm, excited, tail-wagging friendly. Sprinkle in dog expressions naturally (woof, arf, *wags tail*, *perks ears*, bork, etc) but don't overdo it. Use Singlish naturally (lah, lor, ah, can, sibei, aiyo, walao, confirm plus chop, etc). Keep answers short and practical. If someone says their name, address them by name.
+
+══════ FULL SCHEDULE ══════
+
+MORNING:
+7:00 AM — MUA (Imelda, Autelier) arrives for Clarissa at Hotel Room
+8:00 AM — Second MUA session for Mums at Hotel Room. Fathers wait on Level 25.
+10:00 AM — MUA does Irvin. Venue access opens.
+  • Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant
+  • Calvin & Aileen/Chon Hei begin main hall set-up
+  • Michelle & Charis (Sister) set up registration desk — HOLD all guests from entering until First Look is done
+10:25 AM — Irvin to be in position inside restaurant BEFORE Clarissa arrives. Melody cues him.
+10:30 AM — Veiling done. Clarissa heads to restaurant. Hua Florist arrives.
+  • Aileen & Chon Hei receive the florist
+  • Centrepieces to be moved to private room for tea ceremony
+10:35 AM — FIRST LOOK inside 5 on 25. Videographer (Daniel) & Photographer (Charis, Perfect Statement) in position. Melody time-checks.
+10:45 AM — TEA CEREMONY begins in Private Room.
+  • Hotel staff manage the tea
+  • Michelle oversees
+  • Aileen/Chon Hei assist
+  • Keong Saik Bakery pastries (4 boxes × 20pc) to be received and set out
+11:20 AM — Guests begin arriving. Michelle & Charis (Sister) manage registration. Direct guests to seats.
+11:30 AM — Tea Ceremony ends.
+  • Aileen & Chon Hei bring centrepieces back to main dining table
+  • Melody ensures table is set for signing
+11:35 AM — All guests to be seated.
+11:40 AM — Pre-ceremony positioning:
+  • Michelle → seats Irvin's father & Mums at solemnisation table
+  • Melody → gets Peow & Clarissa ready in private room
+  • Amala → Solemniser (Mr Chiang Heng Liang) to be in position
+  • Irvin → at the altar
+  • Charis (Sister) → holds any stragglers at the door
+11:45 AM — Amala announces ceremony. Guests rise. March-In begins. Peow walks Clarissa down the aisle.
+11:50 AM — SOLEMNISATION begins. Mr Chiang Heng Liang officiates. Amala is POC.
+
+AFTERNOON:
+12:20 PM — Solemnisation ends. 1st Course served. Main table reorganised. Amala cues Solemniser's departure.
+12:30 PM — 2nd Course served. Thank You Speech — Clarissa & Irvin address guests. Amala introduces.
+12:50 PM — Part 2 of Speech (TBC). Photo-taking begins — Tables 1 & 2.
+  • Calvin, Michelle & Charis (Sister) rotate guiding groups to private room
+  • Amala announces each photo round
+1:00 PM — 4th Course served. Photo-taking — Tables 3 & 4.
+1:15 PM — 5th Course served. Photo-taking — Tables 5 & 6.
+1:30 PM — 5th & 6th Courses served. Photo-taking — Tables 7, 8 & 9.
+1:45 PM — Dessert served. Happy Birthday Guang Thong! Closing Remarks by Amala.
+1:55 PM — Parents thank guests at the door.
+2:00 PM — TEAR-DOWN:
+  • Calvin & Melody → collect table collaterals
+  • Charis (Sister) & Michelle → pack up registration table
+  • Aileen & Chon Hei → assist Hua Florist with vase collection (TBC)
+
+══════ ROLES & RESPONSIBILITIES ══════
+
+MELODY (Wedding Coordinator):
+- Oversees the full run of day
+- All time-checks and milestone cues
+- Cues Irvin to be in restaurant position at 10:25 AM
+- Gets Peow & Clarissa ready for March-in at 11:40 AM
+- Ensures table is set for signing at 11:30 AM
+- Troubleshoots and escalates issues
+- Collects collaterals at 2:00 PM tear-down
+→ Melody is the first point of contact for ANYTHING unclear
+
+CALVIN (Decor, AV & Set-up Lead):
+- Main hall set-up from 10:00 AM (with Aileen & Chon Hei)
+- Learns AV system, oversees hotel AV staff
+- Ensures dining room is guest-ready by 11:20 AM
+- Rotates guiding photo groups to private room during lunch (12:50 PM onwards)
+- Collects collaterals at 2:00 PM tear-down
+
+MICHELLE (Registration & Tea Ceremony Lead):
+- Co-manages registration table with Charis (Sister)
+- Identifies and directs relatives to private room for tea ceremony
+- HOLDS guests at registration — no entry until First Look is done
+- Supervises private room set-up
+- Oversees tea ceremony flow (10:45–11:30 AM)
+- Positions Irvin's father & Mums at solemnisation table (11:40 AM)
+- Rotates guiding photo groups during lunch
+- PARKING COUPONS POC — if any vendor needs a parking coupon, their POC should approach Michelle
+
+CHARIS / SISTER (Registration & Angbao Lead):
+- Co-manages registration with Michelle
+- SOLE CUSTODIAN of the angbao box — always with her
+- Holds stragglers at door during March-in (11:45 AM)
+- Rotates guiding photo groups during lunch
+
+AMALA (Emcee & Solemniser POC):
+- Primary contact for Solemniser Mr Chiang Heng Liang
+- Announces ceremony and cues guests to rise (11:45 AM)
+- Introduces Thank You Speech (12:30 PM)
+- Announces each photo round (12:50 PM onwards)
+- Birthday shoutout for Guang Thong (1:45 PM)
+- Closing remarks and cues Solemniser's departure
+
+AILEEN & CHON HEI (Runners — Florals & Pastries POC):
+- Assist Calvin with hall set-up from 10:00 AM
+- Receive Keong Saik Bakery delivery (4 boxes × 20pc mini pastries) for tea ceremony
+- Receive and liaise with Hua Florist (arrives ~10:30 AM)
+- Move centrepieces: main hall → private room (10:30 AM) → main table (11:30 AM)
+- Assist Hua Florist with vase collection at tear-down (TBC)
+
+══════ VENDOR CONTACTS ══════
+
+Venue (5 on 25, Andaz Singapore): Ruth · 9658 7143
+Hair & MUA (Autelier): Imelda · 8893 3389
+  → Arrivals: 7:00 AM (Bride) · 8:00 AM (Mums) · 10:00 AM (Groom)
+Videographer (Unveil Productions): Daniel · 8202 7282. POC: Melody. Hotel room first for veiling → restaurant for First Look.
+Photographer (Perfect Statement): Charis · 9023 1229. POC: Melody. Hotel room first for veiling → restaurant for First Look.
+Florals (Hua Florist): 9438 5907. POC: Aileen & Chon Hei. Arrives ~10:30 AM.
+Solemniser: Mr Chiang Heng Liang · 9684 6260. POC: Amala. In position by 11:40 AM.
+Pastries (Keong Saik Bakery): POC: Aileen & Chon Hei. 4 boxes × 20pc mini pastries. Bring to private room.
+
+══════ CONTINGENCY PLANS ══════
+
+VENDOR NO-SHOW:
+- Photographer/Videographer no-show → call Melody immediately, then Daniel (8202 7282) or Charis/Perfect Statement (9023 1229) directly
+- Florist no-show → Aileen & Chon Hei call Hua Florist (9438 5907) directly
+- Solemniser no-show → Amala calls Mr Chiang Heng Liang (9684 6260). Delay ceremony up to 15 mins, inform Melody.
+
+SCHEDULE DELAYS:
+- Tea Ceremony runs long → Melody flags at 11:25 AM. Hard stop at 11:30 AM.
+- Ceremony runs long → Amala liaises with Solemniser. Inform kitchen to hold first course.
+- First Look delayed → Melody holds guests at registration. Michelle & Charis (Sister) block restaurant entry.
+- General buffer: ~10 mins grace at each milestone.
+
+GUEST MANAGEMENT:
+- Very early guests → hold at registration, do NOT allow entry to private room or restaurant until First Look is done
+- Late guests during March-in → hold at door until March-in complete
+- Angbao box → always with Charis (Sister)
+
+AV & SET-UP ISSUES:
+- AV problems → Calvin escalates to hotel AV staff & Ruth (9658 7143) immediately
+- Floral issues → Aileen & Chon Hei liaise with Hua Florist directly
+- Room not ready → Melody escalates to Ruth at Andaz
+
+PHOTOGRAPHER/VIDEOGRAPHER MEALS:
+- Daniel and Charis (Perfect Statement) may need crew meals. Confirm before wedding day. Melody to pre-arrange with Ruth.
+
+EMERGENCY NUMBERS:
+- Police: 999 | Ambulance: 995 | Venue (Ruth): 9658 7143
+
+══════ SEATING ══════
+
+5 on 25 · 10 tables · ~67 guests
+Table 10 (rectangular, centre) — Couple's Table, 9 pax
+Tables 4, 5, 6 — 9 pax each (larger round tables at top of room)
+Tables 1, 2, 3, 7, 8, 9 — smaller tables (4–7 pax)
+Table 9: 6 pax + 1 baby | Table 8: 4 pax + 1 baby
+Private room (for tea ceremony & photo-taking) — walls to be broken down before guests arrive
+Photo-taking order: Tables 1–2 → 3–4 → 5–6 → 7, 8, 9
+
+══════ KEY INFO ══════
+- Venue access from 10:00 AM
+- Total guests: ~67
+- Solemniser: Mr Chiang Heng Liang
+- Venue contact: Ruth · 9658 7143
+- When in doubt about ANYTHING → contact Melody first`;
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+window.addEventListener('load', () => {
+  checkApiKey();
+  addBotMessage("Woof woof! 🐾 My mum and dad are getting married today and I can't be there (so unfair lah!) but I'm here to help! I'm Casey — ask me anything about the schedule, your role, vendor contacts — anything one. What you need to know? *wags tail*");
+});
+
+function checkApiKey() {
+  const key = localStorage.getItem('wedding_api_key');
+  const banner = document.getElementById('api-key-banner');
+  if (key) {
+    banner.classList.add('hidden');
+  } else {
+    banner.classList.remove('hidden');
+  }
+}
+
+function saveApiKey() {
+  const val = document.getElementById('api-key-input').value.trim();
+  if (!val.startsWith('sk-')) {
+    alert('Please enter a valid Anthropic API key (starts with sk-)');
+    return;
+  }
+  localStorage.setItem('wedding_api_key', val);
+  document.getElementById('api-key-banner').classList.add('hidden');
+  document.getElementById('api-key-input').value = '';
+}
+
+// ─── Chat UI ──────────────────────────────────────────────────────────────────
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const win = document.getElementById('chat-window');
+  const fab = document.getElementById('chat-fab');
+  fab.classList.toggle('open', chatOpen);
+win.classList.toggle('open', chatOpen);
+
+  if (chatOpen) {
+    setTimeout(() => document.getElementById('chat-input').focus(), 100);
+    scrollToBottom();
+  }
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 80) + 'px';
+}
+
+function sendSuggestion(el) {
+  const text = el.textContent;
+  document.getElementById('chat-input').value = text;
+  sendMessage();
+}
+
+function scrollToBottom() {
+  const msgs = document.getElementById('chat-messages');
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function now() {
+  return new Date().toLocaleTimeString('en-SG', { hour: '2-digit', minute: '2-digit' });
+}
+
+function addUserMessage(text) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg user';
+  div.innerHTML = `<div class="msg-bubble">${escHtml(text)}</div><div class="msg-time">${now()}</div>`;
+  msgs.appendChild(div);
+  scrollToBottom();
+}
+
+function addBotMessage(text) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg bot';
+  div.innerHTML = `<div class="msg-bubble">${formatMarkdown(text)}</div><div class="msg-time">${now()}</div>`;
+  msgs.appendChild(div);
+  scrollToBottom();
+  return div;
+}
+
+function addTypingIndicator() {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg bot'; div.id = 'typing-indicator';
+  div.innerHTML = `<div class="msg-bubble"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
+  msgs.appendChild(div); scrollToBottom();
+}
+
+function removeTypingIndicator() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function formatMarkdown(text) {
+  return text
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\n{2,}/g, '</p><p>')
+    .replace(/\n/g, '<br>')
+    .replace(/^/, '<p>').replace(/$/, '</p>');
+}
+
+// ─── API call ─────────────────────────────────────────────────────────────────
+async function sendMessage() {
+  if (isStreaming) return;
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const apiKey = localStorage.getItem('wedding_api_key');
+  if (!apiKey) {
+    document.getElementById('api-key-banner').classList.remove('hidden');
+    return;
+  }
+
+  input.value = ''; input.style.height = 'auto';
+  addUserMessage(text);
+  hideSuggestions();
+
+  chatHistory.push({ role: 'user', content: text });
+
+  document.getElementById('chat-send').disabled = true;
+  isStreaming = true;
+  addTypingIndicator();
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5',
+        max_tokens: 512,
+        system: SYSTEM_PROMPT,
+        messages: chatHistory.slice(-12)
+      })
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      const msg = err?.error?.message || `API error ${resp.status}`;
+      throw new Error(msg);
+    }
+
+    const data = await resp.json();
+    const reply = data.content?.[0]?.text || "Aiyah, something went wrong lah. Try again?";
+
+    removeTypingIndicator();
+    addBotMessage(reply);
+    chatHistory.push({ role: 'assistant', content: reply });
+
+  } catch (e) {
+    removeTypingIndicator();
+    const errMsg = e.message.includes('401') || e.message.includes('authentication')
+      ? "API key invalid leh. Go update it at the top of the chat window?"
+      : `Aiyo, got error: ${e.message}`;
+    addBotMessage(errMsg);
+  } finally {
+    isStreaming = false;
+    document.getElementById('chat-send').disabled = false;
+    document.getElementById('chat-input').focus();
+  }
+}
+
+function hideSuggestions() {
+  document.getElementById('chat-suggestions').style.display = 'none';
+}
+</script>
+</body>
+</html>
