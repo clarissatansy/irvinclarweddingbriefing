@@ -68,8 +68,8 @@
   /* TIMELINE */
   .timeline { position: relative; margin-top: 2.5rem; }
   .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(122,158,126,0.25); transform: translateX(-50%); }
-  .tl-item { display: grid; grid-template-columns: 1fr 40px 1fr; gap: 0 1rem; margin-bottom: 2rem; align-items: start; }
-  .tl-left { text-align: right; padding-top: 2px; }
+  .tl-item { display: grid; grid-template-columns: 24px 1fr; gap: 0 1.25rem; margin-bottom: 2rem; align-items: start; }
+  .tl-left { display: none; }
   .tl-right { padding-top: 2px; }
   .tl-center { display: flex; flex-direction: column; align-items: center; }
   .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); border: 2px solid var(--cream); box-shadow: 0 0 0 2px var(--sage-light); margin-top: 4px; flex-shrink: 0; }
