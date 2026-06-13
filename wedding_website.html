@@ -84,6 +84,7 @@
   .tl-bullets li.team { color: #999; }
   .tl-detail { font-size: 11px; color: var(--text-light); line-height: 1.6; }
   .tl-poc { display: inline-block; margin-top: 5px; font-size: 10px; background: var(--sage-pale); color: var(--sage); border-radius: 20px; padding: 2px 10px; letter-spacing: 0.5px; }
+  .tl-loc { display: inline-block; margin-top: 5px; margin-right: 4px; font-size: 10px; background: #e8eef8; color: #5273a8; border-radius: 20px; padding: 2px 10px; letter-spacing: 0.3px; }
   .tl-tea-order { margin: 8px 0 2px; border-left: 2px solid rgba(155,141,196,0.3); padding-left: 10px; }
   .tl-tea-order-row { font-size: 11px; color: var(--text-light); line-height: 1.7; display: flex; gap: 6px; }
   .tl-tea-order-num { color: #9B8DC4; font-weight: 600; min-width: 18px; font-size: 10px; }
@@ -265,7 +266,7 @@
       <div class="overview-card">
         <div class="overview-card-label">First Look</div>
         <div class="overview-card-time">10:35</div>
-        <div class="overview-card-desc">Inside 5 on 25</div>
+        <div class="overview-card-desc">Private Room · 5 on 25</div>
       </div>
       <div class="overview-card">
         <div class="overview-card-label">Tea Ceremony</div>
@@ -308,32 +309,35 @@
     <div class="timeline">
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">7:00 AM</div>
-          <div class="tl-event couple">MUA arrives for Clarissa</div>
+          <div class="tl-event">MUA arrives for Clarissa</div>
+          <span class="tl-loc">Hotel Room</span>
           <ul class="tl-bullets">
-            <li>Imelda (Autelier) · Hotel Room</li>
+            <li>Imelda (Autelier)</li>
           </ul>
         </div>
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">8:00 AM</div>
-          <div class="tl-event couple">Second MUA session — Mums</div>
+          <div class="tl-event">Second MUA session — Mums</div>
+          <span class="tl-loc">Hotel Room</span>
           <ul class="tl-bullets">
-            <li>Hotel Room · Fathers wait on Level 25</li>
+            <li>Fathers wait on Level 25</li>
           </ul>
         </div>
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:00 AM</div>
-          <div class="tl-event couple">MUA works on Irvin · Venue access opens</div>
+          <div class="tl-event">MUA works on Irvin · Venue access opens</div>
+          <span class="tl-loc">Hotel Room</span><span class="tl-loc">5 on 25</span>
           <ul class="tl-bullets">
             <li class="team">Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant</li>
             <li class="team">Calvin & Aileen/Chon Hei begin main hall set-up</li>
@@ -344,10 +348,11 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:25 AM</div>
-          <div class="tl-event couple">Irvin in position in restaurant</div>
+          <div class="tl-event">Irvin in position in restaurant</div>
+          <span class="tl-loc">5 on 25</span>
           <ul class="tl-bullets">
             <li>Must be in place before Clarissa arrives</li>
             <li class="team">Melody to cue Irvin</li>
@@ -356,10 +361,11 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:30 AM</div>
-          <div class="tl-event couple">Veiling done · Clarissa heads to restaurant</div>
+          <div class="tl-event">Veiling done · Clarissa heads to restaurant</div>
+          <span class="tl-loc">Hotel Room → 5 on 25</span>
           <ul class="tl-bullets">
             <li class="team">Centrepieces moved: main hall → private room (for tea ceremony)</li>
             <li class="team">Aileen & Chon Hei to assist with move</li>
@@ -371,7 +377,8 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:35 AM</div>
-          <div class="tl-event couple">✦ First Look — inside 5 on 25</div>
+          <div class="tl-event couple">✦ First Look</div>
+          <span class="tl-loc">Private Room · 5 on 25</span>
           <ul class="tl-bullets">
             <li>Daniel (videographer) & Charis (photographer) in position</li>
             <li class="team">Melody time-checks</li>
@@ -383,7 +390,8 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:45 AM</div>
-          <div class="tl-event couple">✦ Tea Ceremony begins — Private Room</div>
+          <div class="tl-event couple">✦ Tea Ceremony</div>
+          <span class="tl-loc">Private Room</span>
           <ul class="tl-bullets">
             <li>Keong Saik Bakery pastries (4 boxes × 20pc) received and set out</li>
             <li class="team">Michelle oversees flow · Aileen & Chon Hei assist</li>
@@ -424,10 +432,10 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:30 AM</div>
-          <div class="tl-event couple">Tea Ceremony ends</div>
+          <div class="tl-event">Tea Ceremony ends</div>
           <ul class="tl-bullets">
             <li class="team">Aileen & Chon Hei bring centrepieces back to main table</li>
             <li class="team">Calvin ensures signing table is set up</li>
@@ -464,6 +472,7 @@
         <div class="tl-right">
           <div class="tl-time">11:45 AM</div>
           <div class="tl-event couple">✦ March-In</div>
+          <span class="tl-loc">5 on 25</span>
           <ul class="tl-bullets">
             <li>Amala announces · guests rise</li>
             <li>Peow walks Clarissa down the aisle</li>
@@ -475,7 +484,8 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:50 AM</div>
-          <div class="tl-event couple">✦ Solemnisation begins</div>
+          <div class="tl-event couple">✦ Solemnisation</div>
+          <span class="tl-loc">5 on 25</span>
           <ul class="tl-bullets">
             <li>Solemniser: Mr Chiang Heng Liang</li>
             <li class="team">Amala POC</li>
@@ -492,7 +502,8 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">12:20 PM</div>
-          <div class="tl-event couple">✦ Solemnisation ends · 1st Course served</div>
+          <div class="tl-event couple">✦ 1st Course served</div>
+          <span class="tl-loc">5 on 25</span>
           <ul class="tl-bullets">
             <li>Main table reorganised for lunch</li>
             <li class="team">Amala cues Solemniser's departure</li>
@@ -504,7 +515,7 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">12:40 PM</div>
-          <div class="tl-event couple">2nd Course served · Thank You Speech</div>
+          <div class="tl-event couple">✦ Thank You Speech · 2nd Course</div>
           <ul class="tl-bullets">
             <li>Clarissa & Irvin address their guests</li>
             <li class="team">Amala to introduce</li>
@@ -513,10 +524,10 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">1:00 PM</div>
-          <div class="tl-event couple">3rd Course served · Photo-taking — Tables 1 & 2</div>
+          <div class="tl-event">3rd Course served · Photo-taking — Tables 1 & 2</div>
           <ul class="tl-bullets">
             <li class="team">Calvin, Michelle & Charis (Sister) rotate guiding groups to private room</li>
             <li class="team">Amala announces each round</li>
@@ -525,10 +536,10 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">1:20 PM</div>
-          <div class="tl-event couple">4th Course served · Photo-taking — Tables 3 & 4</div>
+          <div class="tl-event">4th Course served · Photo-taking — Tables 3 & 4</div>
           <ul class="tl-bullets">
             <li class="team">Team rotates — everyone gets to eat too</li>
           </ul>
@@ -539,15 +550,15 @@
         <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">1:40 PM</div>
-          <div class="tl-event couple">5th Course served · Photo-taking — Tables 5 & 6</div>
+          <div class="tl-event">5th Course served · Photo-taking — Tables 5 & 6</div>
         </div>
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">2:00 PM</div>
-          <div class="tl-event couple">6th Course / Dessert · Photo-taking — Tables 7, 8 & 9</div>
+          <div class="tl-event couple">✦ Wrap Up · 6th Course / Dessert · Photo-taking — Tables 7, 8 & 9</div>
           <ul class="tl-bullets">
             <li>Happy Birthday Guan Thong! 🎂</li>
             <li class="team">Amala: Closing Remarks</li>
@@ -556,10 +567,10 @@
       </div>
 
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">2:10 PM</div>
-          <div class="tl-event couple">Parents thank guests at the door</div>
+          <div class="tl-event">Parents thank guests at the door</div>
         </div>
       </div>
 
