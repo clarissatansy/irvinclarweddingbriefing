@@ -73,11 +73,20 @@
   .tl-right { padding-top: 2px; }
   .tl-center { display: flex; flex-direction: column; align-items: center; }
   .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); border: 2px solid var(--cream); box-shadow: 0 0 0 2px var(--sage-light); margin-top: 4px; flex-shrink: 0; }
+  .tl-dot.couple { background: #9B8DC4; box-shadow: 0 0 0 2px #c9bfe8; }
   .tl-stem { flex: 1; width: 1px; background: rgba(122,158,126,0.2); min-height: 30px; margin-top: 4px; }
   .tl-time { font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: var(--sage); margin-bottom: 2px; }
-  .tl-event { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 3px; line-height: 1.4; }
+  .tl-event { font-size: 13px; font-weight: 600; color: var(--mocha); margin-bottom: 4px; line-height: 1.4; }
+  .tl-event.couple { color: #7B6BAA; }
+  .tl-bullets { list-style: none; padding: 0; margin: 4px 0 2px; }
+  .tl-bullets li { font-size: 11.5px; color: var(--text-light); line-height: 1.6; padding-left: 12px; position: relative; }
+  .tl-bullets li::before { content: '·'; position: absolute; left: 0; color: var(--sage); font-size: 14px; line-height: 1.3; }
+  .tl-bullets li.team { color: #999; }
   .tl-detail { font-size: 11px; color: var(--text-light); line-height: 1.6; }
   .tl-poc { display: inline-block; margin-top: 5px; font-size: 10px; background: var(--sage-pale); color: var(--sage); border-radius: 20px; padding: 2px 10px; letter-spacing: 0.5px; }
+  .tl-tea-order { margin: 8px 0 2px; border-left: 2px solid rgba(155,141,196,0.3); padding-left: 10px; }
+  .tl-tea-order-row { font-size: 11px; color: var(--text-light); line-height: 1.7; display: flex; gap: 6px; }
+  .tl-tea-order-num { color: #9B8DC4; font-weight: 600; min-width: 18px; font-size: 10px; }
   .tl-item.right .tl-left { opacity: 0; }
 
   /* ROLES */
@@ -297,84 +306,136 @@
 
     <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--sage);margin-bottom:1.5rem;">Morning</div>
     <div class="timeline">
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">7:00 AM</div>
-          <div class="tl-event">MUA arrives for Clarissa</div>
-          <div class="tl-detail">Imelda (Autelier) · Hotel Room</div>
+          <div class="tl-event couple">MUA arrives for Clarissa</div>
+          <ul class="tl-bullets">
+            <li>Imelda (Autelier) · Hotel Room</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">8:00 AM</div>
-          <div class="tl-event">Second MUA session — Mums</div>
-          <div class="tl-detail">Hotel Room · Fathers wait on Level 25</div>
+          <div class="tl-event couple">Second MUA session — Mums</div>
+          <ul class="tl-bullets">
+            <li>Hotel Room · Fathers wait on Level 25</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:00 AM</div>
-          <div class="tl-event">MUA works on Irvin · Venue access opens</div>
-          <div class="tl-detail">Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant · Calvin & Aileen/Chon Hei begin hall set-up · Michelle & Charis (Sister) set up registration — hold guests from entering until First Look is done</div>
-          <span class="tl-poc">All team</span>
+          <div class="tl-event couple">MUA works on Irvin · Venue access opens</div>
+          <ul class="tl-bullets">
+            <li class="team">Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant</li>
+            <li class="team">Calvin & Aileen/Chon Hei begin main hall set-up</li>
+            <li class="team">Hua Florist arrives — Aileen & Chon Hei to receive</li>
+            <li class="team">Michelle & Charis (Sister) set up registration — hold all guests from entering until First Look is done</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:25 AM</div>
-          <div class="tl-event">Irvin positioned in restaurant</div>
-          <div class="tl-detail">To be in place before Clarissa arrives</div>
-          <span class="tl-poc">Melody to cue</span>
+          <div class="tl-event couple">Irvin in position in restaurant</div>
+          <ul class="tl-bullets">
+            <li>Must be in place before Clarissa arrives</li>
+            <li class="team">Melody to cue Irvin</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:30 AM</div>
-          <div class="tl-event">Veiling · Clarissa heads to restaurant · Hua Florist arrives</div>
-          <div class="tl-detail">Aileen & Chon Hei to receive florist · Centrepieces moved to private room for tea ceremony</div>
-          <span class="tl-poc">Melody · Aileen & Chon Hei</span>
+          <div class="tl-event couple">Veiling done · Clarissa heads to restaurant</div>
+          <ul class="tl-bullets">
+            <li class="team">Centrepieces moved: main hall → private room (for tea ceremony)</li>
+            <li class="team">Aileen & Chon Hei to assist with move</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:35 AM</div>
-          <div class="tl-event">First Look — inside 5 on 25</div>
-          <div class="tl-detail">Videographer & Photographer in position</div>
-          <span class="tl-poc">Melody time-checks</span>
+          <div class="tl-event couple">✦ First Look — inside 5 on 25</div>
+          <ul class="tl-bullets">
+            <li>Daniel (videographer) & Charis (photographer) in position</li>
+            <li class="team">Melody time-checks</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">10:45 AM</div>
-          <div class="tl-event">Tea Ceremony begins — Private Room</div>
-          <div class="tl-detail">Hotel staff manage tea · Michelle oversees · Aileen/Chon Hei assist · Keong Saik Bakery pastries (4 boxes × 20pc) to be received and set out</div>
-          <span class="tl-poc">Michelle</span>
+          <div class="tl-event couple">✦ Tea Ceremony begins — Private Room</div>
+          <ul class="tl-bullets">
+            <li>Keong Saik Bakery pastries (4 boxes × 20pc) received and set out</li>
+            <li class="team">Michelle oversees flow · Aileen & Chon Hei assist</li>
+          </ul>
+          <div class="tl-tea-order">
+            <div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;">Tea Order</div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">1</span><span>Irvin's Parents — Joe (Dad), Carol (Mum)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">2</span><span>Clar's Parents — Peow (Dad), Corina (Mum)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">3</span><span>Clar's Paternal Grandma — Ah Ma</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">4</span><span>Clar's Maternal Grandparents — Alice (Mama), Lawrence (Gong Gong)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">5</span><span>Irvin's Grand Uncle — Zek Gong</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">6</span><span>Irvin's Dad's Sister — Sally (Korkor)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">7</span><span>Irvin's Dad's 2nd Brother — Patrick (Li Zek), Hock Gim (Li Zim)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">8</span><span>Irvin's Dad's 3rd Brother — Barry (Shue Zek), PY (Shue Zim)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">9</span><span>Irvin's Paternal Grand Uncle's Son — Michael (Uncle Michael), Rachel (Auntie Rachel)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">10</span><span>Irvin's Mum's 2nd Sister — Er Yi</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">11</span><span>Irvin's Mum's 3rd Sister — Ah Yi</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">12</span><span>Irvin's Mum's Brother — Ah Q</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">13</span><span>Clar's Dad's Older Brother — Guan Thong (Tua Pek), Susan (Tua Em)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">14</span><span>Clar's Dad's Younger Brother — Guan Liang (Xiao Shu), Helen (San Shen)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">15</span><span>Clar's Mum's Eldest Sister — Elizabeth (Godma)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">16</span><span>Clar's Mum's Brother — George (Ah Gu), Lena (Auntie Lena)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">17</span><span>Clar's Mum's 2nd Sister — Anne (Yiyi Anne), Patrick (Uncle Patrick)</span></div>
+            <div class="tl-tea-order-row"><span class="tl-tea-order-num">18</span><span>Clar's Mum's 3rd Sister — Veron (Yiyi Nica), Chester (Uncle Chester)</span></div>
+          </div>
         </div>
       </div>
+
       <div class="tl-item left">
         <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:20 AM</div>
           <div class="tl-event">Guests begin arriving</div>
-          <div class="tl-detail">Michelle & Charis (Sister) manage registration · Direct guests to seats</div>
+          <ul class="tl-bullets">
+            <li class="team">Michelle & Charis (Sister) manage registration · direct guests to seats</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:30 AM</div>
-          <div class="tl-event">Tea Ceremony ends</div>
-          <div class="tl-detail">Aileen & Chon Hei bring centrepieces back to main table · Melody ensures table is set for signing</div>
-          <span class="tl-poc">Aileen & Chon Hei · Melody</span>
+          <div class="tl-event couple">Tea Ceremony ends</div>
+          <ul class="tl-bullets">
+            <li class="team">Aileen & Chon Hei bring centrepieces back to main table</li>
+            <li class="team">Calvin ensures signing table is set up</li>
+            <li class="team">Melody focuses on getting everyone into position</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
         <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
@@ -382,108 +443,140 @@
           <div class="tl-event">All guests to be seated</div>
         </div>
       </div>
+
       <div class="tl-item left">
         <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:40 AM</div>
           <div class="tl-event">Pre-ceremony positioning</div>
-          <div class="tl-detail">Michelle — Irvin's father & Mums seated at solemnisation table · Melody — gets Peow & Clarissa ready in private room · Amala — Solemniser in position · Irvin — at the altar · Charis (Sister) — hold any stragglers at door</div>
+          <ul class="tl-bullets">
+            <li class="team">Michelle — seats Irvin's father & Mums at solemnisation table</li>
+            <li class="team">Melody — gets Peow & Clarissa ready in private room</li>
+            <li class="team">Amala — Solemniser in position</li>
+            <li class="team">Irvin — at the altar</li>
+            <li class="team">Charis (Sister) — holds any stragglers at the door</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:45 AM</div>
-          <div class="tl-event">Amala announces ceremony · Guests rise · March-In</div>
-          <div class="tl-detail">Peow walks Clarissa down the aisle</div>
-          <span class="tl-poc">Amala</span>
+          <div class="tl-event couple">✦ March-In</div>
+          <ul class="tl-bullets">
+            <li>Amala announces · guests rise</li>
+            <li>Peow walks Clarissa down the aisle</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">11:50 AM</div>
-          <div class="tl-event">Solemnisation begins</div>
-          <span class="tl-poc">Mr Chiang Heng Liang · Amala POC</span>
+          <div class="tl-event couple">✦ Solemnisation begins</div>
+          <ul class="tl-bullets">
+            <li>Solemniser: Mr Chiang Heng Liang</li>
+            <li class="team">Amala POC</li>
+          </ul>
         </div>
       </div>
+
     </div>
 
     <div style="font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--sage);margin:2.5rem 0 1.5rem;">Afternoon</div>
     <div class="timeline">
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">12:20 PM</div>
-          <div class="tl-event">Solemnisation ends · 1st Course served</div>
-          <div class="tl-detail">Main table reorganised · Amala cues Solemniser's departure</div>
-          <span class="tl-poc">Amala</span>
+          <div class="tl-event couple">✦ Solemnisation ends · 1st Course served</div>
+          <ul class="tl-bullets">
+            <li>Main table reorganised for lunch</li>
+            <li class="team">Amala cues Solemniser's departure</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
-          <div class="tl-time">12:30 PM</div>
-          <div class="tl-event">2nd Course served · Thank You Speech</div>
-          <div class="tl-detail">Clarissa & Irvin address their guests</div>
-          <span class="tl-poc">Amala to introduce</span>
+          <div class="tl-time">12:40 PM</div>
+          <div class="tl-event couple">2nd Course served · Thank You Speech</div>
+          <ul class="tl-bullets">
+            <li>Clarissa & Irvin address their guests</li>
+            <li class="team">Amala to introduce</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
-        <div class="tl-right">
-          <div class="tl-time">12:50 PM</div>
-          <div class="tl-event">Part 2 of Speech (TBC) · Photo-taking begins — Tables 1 & 2</div>
-          <div class="tl-detail">Calvin, Michelle & Charis (Sister) rotate guiding groups to private room</div>
-          <span class="tl-poc">Amala announces each round</span>
-        </div>
-      </div>
-      <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">1:00 PM</div>
-          <div class="tl-event">4th Course served · Photo-taking — Tables 3 & 4</div>
-          <div class="tl-detail">Team rotates — everyone gets to eat too</div>
+          <div class="tl-event couple">3rd Course served · Photo-taking — Tables 1 & 2</div>
+          <ul class="tl-bullets">
+            <li class="team">Calvin, Michelle & Charis (Sister) rotate guiding groups to private room</li>
+            <li class="team">Amala announces each round</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
-          <div class="tl-time">1:15 PM</div>
-          <div class="tl-event">5th Course served · Photo-taking — Tables 5 & 6</div>
+          <div class="tl-time">1:20 PM</div>
+          <div class="tl-event couple">4th Course served · Photo-taking — Tables 3 & 4</div>
+          <ul class="tl-bullets">
+            <li class="team">Team rotates — everyone gets to eat too</li>
+          </ul>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
-          <div class="tl-time">1:30 PM</div>
-          <div class="tl-event">5th & 6th Courses served · Photo-taking — Tables 7, 8 & 9</div>
+          <div class="tl-time">1:40 PM</div>
+          <div class="tl-event couple">5th Course served · Photo-taking — Tables 5 & 6</div>
         </div>
       </div>
+
       <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
-        <div class="tl-right">
-          <div class="tl-time">1:45 PM</div>
-          <div class="tl-event">Dessert served · Happy Birthday Guang Thong! · Closing Remarks</div>
-          <span class="tl-poc">Amala</span>
-        </div>
-      </div>
-      <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
-        <div class="tl-right">
-          <div class="tl-time">1:55 PM</div>
-          <div class="tl-event">Parents thank guests at the door</div>
-        </div>
-      </div>
-      <div class="tl-item left">
-        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
         <div class="tl-right">
           <div class="tl-time">2:00 PM</div>
+          <div class="tl-event couple">6th Course / Dessert · Photo-taking — Tables 7, 8 & 9</div>
+          <ul class="tl-bullets">
+            <li>Happy Birthday Guan Thong! 🎂</li>
+            <li class="team">Amala: Closing Remarks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot couple"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">2:10 PM</div>
+          <div class="tl-event couple">Parents thank guests at the door</div>
+        </div>
+      </div>
+
+      <div class="tl-item left">
+        <div class="tl-center"><div class="tl-dot"></div><div class="tl-stem"></div></div>
+        <div class="tl-right">
+          <div class="tl-time">2:15 PM</div>
           <div class="tl-event">Tear-Down</div>
-          <div class="tl-detail">Calvin & Melody — table collaterals · Charis (Sister) & Michelle — registration table · Aileen & Chon Hei — assist Hua Florist with vase collection (TBC)</div>
+          <ul class="tl-bullets">
+            <li class="team">Calvin & Melody — collect table collaterals</li>
+            <li class="team">Charis (Sister) & Michelle — pack up registration table</li>
+            <li class="team">Aileen & Chon Hei — assist Hua Florist with vase collection (TBC)</li>
+          </ul>
           <span class="tl-poc">All team</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1055,24 +1148,26 @@ You are Casey, Clarissa & Irvin's dog. You can't be at the wedding today (dogs n
 MORNING:
 7:00 AM — MUA (Imelda, Autelier) arrives for Clarissa at Hotel Room
 8:00 AM — Second MUA session for Mums at Hotel Room. Fathers wait on Level 25.
-10:00 AM — MUA does Irvin. Venue access opens.
+10:00 AM — MUA does Irvin. Venue access opens. Hua Florist arrives.
   • Daniel & Charis (Perfect Statement) head to hotel room for veiling, then to restaurant
   • Calvin & Aileen/Chon Hei begin main hall set-up
+  • Aileen & Chon Hei receive the Hua Florist
   • Michelle & Charis (Sister) set up registration desk — HOLD all guests from entering until First Look is done
 10:25 AM — Irvin to be in position inside restaurant BEFORE Clarissa arrives. Melody cues him.
-10:30 AM — Veiling done. Clarissa heads to restaurant. Hua Florist arrives.
-  • Aileen & Chon Hei receive the florist
-  • Centrepieces to be moved to private room for tea ceremony
+10:30 AM — Veiling done. Clarissa heads to restaurant.
+  • Centrepieces to be moved to private room for tea ceremony (Aileen & Chon Hei)
 10:35 AM — FIRST LOOK inside 5 on 25. Videographer (Daniel) & Photographer (Charis, Perfect Statement) in position. Melody time-checks.
 10:45 AM — TEA CEREMONY begins in Private Room.
   • Hotel staff manage the tea
   • Michelle oversees
   • Aileen/Chon Hei assist
   • Keong Saik Bakery pastries (4 boxes × 20pc) to be received and set out
+  TEA ORDER: 1. Irvin's Parents (Joe, Carol) · 2. Clar's Parents (Peow, Corina) · 3. Clar's Paternal Grandma (Ah Ma) · 4. Clar's Maternal Grandparents (Alice/Mama, Lawrence/Gong Gong) · 5. Irvin's Grand Uncle (Zek Gong) · 6. Sally (Korkor) · 7. Patrick & Hock Gim · 8. Barry & PY · 9. Michael & Rachel · 10. Er Yi · 11. Ah Yi · 12. Ah Q · 13. Guan Thong & Susan · 14. Guan Liang & Helen · 15. Elizabeth (Godma) · 16. George & Lena · 17. Anne & Patrick · 18. Veron & Chester
 11:20 AM — Guests begin arriving. Michelle & Charis (Sister) manage registration. Direct guests to seats.
 11:30 AM — Tea Ceremony ends.
   • Aileen & Chon Hei bring centrepieces back to main dining table
-  • Melody ensures table is set for signing
+  • Calvin ensures signing table is set up
+  • Melody focuses on getting everyone into position
 11:35 AM — All guests to be seated.
 11:40 AM — Pre-ceremony positioning:
   • Michelle → seats Irvin's father & Mums at solemnisation table
@@ -1085,16 +1180,13 @@ MORNING:
 
 AFTERNOON:
 12:20 PM — Solemnisation ends. 1st Course served. Main table reorganised. Amala cues Solemniser's departure.
-12:30 PM — 2nd Course served. Thank You Speech — Clarissa & Irvin address guests. Amala introduces.
-12:50 PM — Part 2 of Speech (TBC). Photo-taking begins — Tables 1 & 2.
-  • Calvin, Michelle & Charis (Sister) rotate guiding groups to private room
-  • Amala announces each photo round
-1:00 PM — 4th Course served. Photo-taking — Tables 3 & 4.
-1:15 PM — 5th Course served. Photo-taking — Tables 5 & 6.
-1:30 PM — 5th & 6th Courses served. Photo-taking — Tables 7, 8 & 9.
-1:45 PM — Dessert served. Happy Birthday Guang Thong! Closing Remarks by Amala.
-1:55 PM — Parents thank guests at the door.
-2:00 PM — TEAR-DOWN:
+12:40 PM — 2nd Course served. Thank You Speech — Clarissa & Irvin address guests. Amala introduces.
+1:00 PM — 3rd Course served. Photo-taking begins — Tables 1 & 2. Calvin, Michelle & Charis (Sister) rotate guiding groups to private room. Amala announces each round.
+1:20 PM — 4th Course served. Photo-taking — Tables 3 & 4.
+1:40 PM — 5th Course served. Photo-taking — Tables 5 & 6.
+2:00 PM — 6th Course / Dessert. Photo-taking — Tables 7, 8 & 9. Happy Birthday Guan Thong! Closing Remarks by Amala.
+2:10 PM — Parents thank guests at the door.
+2:15 PM — TEAR-DOWN:
   • Calvin & Melody → collect table collaterals
   • Charis (Sister) & Michelle → pack up registration table
   • Aileen & Chon Hei → assist Hua Florist with vase collection (TBC)
@@ -1106,7 +1198,7 @@ MELODY (Wedding Coordinator):
 - All time-checks and milestone cues
 - Cues Irvin to be in restaurant position at 10:25 AM
 - Gets Peow & Clarissa ready for March-in at 11:40 AM
-- Ensures table is set for signing at 11:30 AM
+- Gets everyone into position after tea ceremony (11:30 AM)
 - Troubleshoots and escalates issues
 - Collects collaterals at 2:00 PM tear-down
 → Melody is the first point of contact for ANYTHING unclear
